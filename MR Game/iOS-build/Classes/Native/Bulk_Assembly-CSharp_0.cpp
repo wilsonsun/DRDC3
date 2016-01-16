@@ -170,13 +170,13 @@ struct FocusWatch_t_1306660846_0;
 #include "AssemblyU2DCSharp_TwirlEffect161594070MethodDeclarations.h"
 #include "AssemblyU2DCSharp_VortexEffect_866693542.h"
 #include "AssemblyU2DCSharp_VortexEffect_866693542MethodDeclarations.h"
-#include "UnityEngine_UI_UnityEngine_UI_Graphic141164899MethodDeclarations.h"
 #include "UnityEngine_UI_UnityEngine_UI_Image_2049549674.h"
-#include "UnityEngine_UI_UnityEngine_UI_Graphic141164899.h"
 #include "UnityEngine_UI_UnityEngine_EventSystems_PointerEv_1258954026.h"
+#include "UnityEngine_UI_UnityEngine_UI_Graphic141164899MethodDeclarations.h"
 #include "UnityEngine_UI_UnityEngine_EventSystems_PointerEv_1258954026MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_RectTransformUtility630152109MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_RectTransform212748479MethodDeclarations.h"
+#include "UnityEngine_UI_UnityEngine_UI_Graphic141164899.h"
 #include "UnityEngine_UnityEngine_RectTransform212748479.h"
 #include "AssemblyU2DCSharp_FocusWatch_1306660846.h"
 #include "AssemblyU2DCSharp_FocusWatch_1306660846MethodDeclarations.h"
@@ -3345,7 +3345,6 @@ extern "C"  void VirtualJoystick_Start_m_129935612_0 (VirtualJoystick_t_13873835
 		Component_GetComponent_TisImage_t_2049549674_0_m_588446870_0_MethodInfo_var = il2cpp_codegen_method_info_from_index(2147483966);
 		s_Il2CppMethodIntialized = true;
 	}
-	Color_t_388944582_0  V_0 = {0};
 	{
 		Image_t_2049549674_0 * L_0 = Component_GetComponent_TisImage_t_2049549674_0_m_588446870_0(__this, /*hidden argument*/Component_GetComponent_TisImage_t_2049549674_0_m_588446870_0_MethodInfo_var);
 		__this->___bgImg_2 = L_0;
@@ -3355,15 +3354,6 @@ extern "C"  void VirtualJoystick_Start_m_129935612_0 (VirtualJoystick_t_13873835
 		NullCheck(L_2);
 		Image_t_2049549674_0 * L_3 = Component_GetComponent_TisImage_t_2049549674_0_m_588446870_0(L_2, /*hidden argument*/Component_GetComponent_TisImage_t_2049549674_0_m_588446870_0_MethodInfo_var);
 		__this->___joystickImg_3 = L_3;
-		Image_t_2049549674_0 * L_4 = (__this->___bgImg_2);
-		NullCheck(L_4);
-		Color_t_388944582_0  L_5 = Graphic_get_color_m2048831972_0(L_4, /*hidden argument*/NULL);
-		V_0 = L_5;
-		(&V_0)->___a_3 = (1.0f);
-		Image_t_2049549674_0 * L_6 = (__this->___bgImg_2);
-		Color_t_388944582_0  L_7 = V_0;
-		NullCheck(L_6);
-		Graphic_set_color_m1311501487_0(L_6, L_7, /*hidden argument*/NULL);
 		return;
 	}
 }

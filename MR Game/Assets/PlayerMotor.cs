@@ -7,42 +7,60 @@ public class PlayerMotor : MonoBehaviour {
 	public float drag = 0.5f;
 	public float terminalRotationSpeed = 25.0f;
 	public Vector3 MoveVector{ set; get; }
-	public VirtualJoystick joystick;
+	public Vector3 AngleVector{ set; get; }
+	public VirtualJoystick PosJoystick;
+	public VirtualJoystick AngleJoystick;
+	public float sensitivityX = 15F;
+
 
 	private Rigidbody thisRigidbody;
 
+
 	// Use this for initialization
 	void Start () {
-		/*thisRigidbody = gameObject.AddComponent<Rigidbody> ();
-		thisRigidbody.maxAngularVelocity = terminalRotationSpeed;
-		thisRigidbody.drag = drag;
-		thisRigidbody.isKinematic = true;*/
-
-
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// View angle rotation
+		AngleVector = AngleInput ();
+		transform.Rotate(0, AngleVector.x * sensitivityX, 0);
+
+		// Movement control
 		CharacterController controller = GetComponent<CharacterController>();
 		MoveVector = PoolInput ();
-		Debug.Log (MoveVector);
+		MoveVector = transform.TransformDirection(MoveVector);
 		controller.Move(MoveVector * Time.deltaTime * moveSpeed);
+
+
 	}
 
-	/*
-	private void Move() {
-		thisRigidbody.AddForce ((MoveVector * moveSpeed));
-	}*/
-
+	// Movement joystick input
 	private Vector3 PoolInput() {
 		Vector3 dir = Vector3.zero;
 
-		if (joystick == null)
+		if (PosJoystick == null)
 			Debug.Log ("where is it");
 
-		dir.x = joystick.Horizontal ();
-		dir.z = joystick.Vertical ();
+		dir.x = PosJoystick.Horizontal ();
+		dir.z = PosJoystick.Vertical ();
+
+		if (dir.magnitude > 1)
+			dir.Normalize ();
+
+		return dir;
+	}
+
+	// Angle joystick input
+	private Vector3 AngleInput() {
+		Vector3 dir = Vector3.zero;
+
+		if (PosJoystick == null)
+			Debug.Log ("where is it");
+
+		dir.x = AngleJoystick.Horizontal ();
+		dir.z = AngleJoystick.Vertical ();
 
 		if (dir.magnitude > 1)
 			dir.Normalize ();

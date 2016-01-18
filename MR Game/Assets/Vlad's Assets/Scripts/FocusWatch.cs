@@ -34,7 +34,6 @@ public class FocusWatch : MonoBehaviour {
 
 		if (timePassed > 1f) {
 			rand = Random.Range (1, 100);
-			print (rand);
 
 			if (rand < skipChance)
 				MoveSecondHandBy (3);

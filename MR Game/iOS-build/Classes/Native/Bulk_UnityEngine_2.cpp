@@ -549,7 +549,7 @@ extern "C"  void TextEditor__ctor_m1029296947_0 (TextEditor_t755371395_0 * __thi
 	if (!s_Il2CppMethodIntialized)
 	{
 		GUIStyle_t822037503_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(920);
-		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
 		s_Il2CppMethodIntialized = true;
 	}
 	{

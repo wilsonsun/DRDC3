@@ -8482,6 +8482,8 @@ extern "C" void Physics_RaycastAll_m892728677_0 ();
 extern "C" void Physics_INTERNAL_CALL_RaycastAll_m_1652871766_0 ();
 extern "C" void Physics_Internal_Raycast_m_929553389_0 ();
 extern "C" void Physics_INTERNAL_CALL_Internal_Raycast_m1291554392_0 ();
+extern "C" void Rigidbody_set_velocity_m799562119_0 ();
+extern "C" void Rigidbody_INTERNAL_set_velocity_m484592601_0 ();
 extern "C" void Rigidbody_set_freezeRotation_m_305493407_0 ();
 extern "C" void Collider_get_attachedRigidbody_m_1473212454_0 ();
 extern "C" void Collider_get_bounds_m1050008332_0 ();
@@ -8752,8 +8754,11 @@ extern "C" void GUI_set_nextScrollStepTime_m_474454500_0 ();
 extern "C" void GUI_set_skin_m1213959601_0 ();
 extern "C" void GUI_get_skin_m_293512454_0 ();
 extern "C" void GUI_DoSetSkin_m800823745_0 ();
+extern "C" void GUI_Button_m_543563329_0 ();
 extern "C" void GUI_CallWindowDelegate_m_2034628492_0 ();
 extern "C" void GUI_set_changed_m727947722_0 ();
+extern "C" void GUI_DoButton_m_2100473027_0 ();
+extern "C" void GUI_INTERNAL_CALL_DoButton_m1954108340_0 ();
 extern "C" void GUIContent__ctor_m923375087_0 ();
 extern "C" void GUIContent__ctor_m174155123_0 ();
 extern "C" void GUIContent__cctor_m_1922239586_0 ();
@@ -10956,15 +10961,10 @@ extern "C" void Vignetting__ctor_m_392581095_0 ();
 extern "C" void Vignetting_CheckResources_m1019166790_0 ();
 extern "C" void Vignetting_OnRenderImage_m1089218725_0 ();
 extern "C" void Vignetting_Main_m457019780_0 ();
-extern "C" void PlayerMotor__ctor_m1179939831_0 ();
-extern "C" void PlayerMotor_set_MoveVector_m_1979166853_0 ();
-extern "C" void PlayerMotor_get_MoveVector_m693526000_0 ();
-extern "C" void PlayerMotor_set_AngleVector_m_937837653_0 ();
-extern "C" void PlayerMotor_get_AngleVector_m_1491325604_0 ();
-extern "C" void PlayerMotor_Start_m127077623_0 ();
-extern "C" void PlayerMotor_Update_m_349708810_0 ();
-extern "C" void PlayerMotor_PoolInput_m79809565_0 ();
-extern "C" void PlayerMotor_AngleInput_m_1668641238_0 ();
+extern "C" void NBackAlgo__ctor_m1866336291_0 ();
+extern "C" void NBackAlgo_Start_m813474083_0 ();
+extern "C" void NBackAlgo_Update_m_546255030_0 ();
+extern "C" void NBackAlgo_PlaceSquare_m798347649_0 ();
 extern "C" void MouseLook__ctor_m_148409049_0 ();
 extern "C" void MouseLook_Update_m1421148870_0 ();
 extern "C" void MouseLook_Start_m_1201271257_0 ();
@@ -11034,6 +11034,18 @@ extern "C" void TwirlEffect__ctor_m822258170_0 ();
 extern "C" void TwirlEffect_OnRenderImage_m_1851175388_0 ();
 extern "C" void VortexEffect__ctor_m_147184260_0 ();
 extern "C" void VortexEffect_OnRenderImage_m_1649002142_0 ();
+extern "C" void PlayerMotor__ctor_m1179939831_0 ();
+extern "C" void PlayerMotor_set_MoveVector_m_1979166853_0 ();
+extern "C" void PlayerMotor_get_MoveVector_m693526000_0 ();
+extern "C" void PlayerMotor_set_AngleVector_m_937837653_0 ();
+extern "C" void PlayerMotor_get_AngleVector_m_1491325604_0 ();
+extern "C" void PlayerMotor_Start_m127077623_0 ();
+extern "C" void PlayerMotor_Update_m_349708810_0 ();
+extern "C" void PlayerMotor_PoolInput_m79809565_0 ();
+extern "C" void PlayerMotor_AngleInput_m_1668641238_0 ();
+extern "C" void Shooter__ctor_m_1291887617_0 ();
+extern "C" void Shooter_Update_m333051630_0 ();
+extern "C" void Shooter_OnGUI_m_1796488967_0 ();
 extern "C" void VirtualJoystick__ctor_m922926596_0 ();
 extern "C" void VirtualJoystick_Update_m272815497_0 ();
 extern "C" void VirtualJoystick_Start_m_129935612_0 ();
@@ -11047,7 +11059,7 @@ extern "C" void FocusWatch_Start_m_325520252_0 ();
 extern "C" void FocusWatch_OnEnable_m_2089185918_0 ();
 extern "C" void FocusWatch_Update_m_1495341047_0 ();
 extern "C" void FocusWatch_MoveSecondHandBy_m1526589948_0 ();
-extern const methodPointerType g_MethodPointers[11036] = 
+extern const methodPointerType g_MethodPointers[11048] = 
 {
 	Object__ctor_m1772956182_0,
 	Object_Equals_m_1736930423_0,
@@ -19520,6 +19532,8 @@ extern const methodPointerType g_MethodPointers[11036] =
 	Physics_INTERNAL_CALL_RaycastAll_m_1652871766_0,
 	Physics_Internal_Raycast_m_929553389_0,
 	Physics_INTERNAL_CALL_Internal_Raycast_m1291554392_0,
+	Rigidbody_set_velocity_m799562119_0,
+	Rigidbody_INTERNAL_set_velocity_m484592601_0,
 	Rigidbody_set_freezeRotation_m_305493407_0,
 	Collider_get_attachedRigidbody_m_1473212454_0,
 	Collider_get_bounds_m1050008332_0,
@@ -19790,8 +19804,11 @@ extern const methodPointerType g_MethodPointers[11036] =
 	GUI_set_skin_m1213959601_0,
 	GUI_get_skin_m_293512454_0,
 	GUI_DoSetSkin_m800823745_0,
+	GUI_Button_m_543563329_0,
 	GUI_CallWindowDelegate_m_2034628492_0,
 	GUI_set_changed_m727947722_0,
+	GUI_DoButton_m_2100473027_0,
+	GUI_INTERNAL_CALL_DoButton_m1954108340_0,
 	GUIContent__ctor_m923375087_0,
 	GUIContent__ctor_m174155123_0,
 	GUIContent__cctor_m_1922239586_0,
@@ -21994,15 +22011,10 @@ extern const methodPointerType g_MethodPointers[11036] =
 	Vignetting_CheckResources_m1019166790_0,
 	Vignetting_OnRenderImage_m1089218725_0,
 	Vignetting_Main_m457019780_0,
-	PlayerMotor__ctor_m1179939831_0,
-	PlayerMotor_set_MoveVector_m_1979166853_0,
-	PlayerMotor_get_MoveVector_m693526000_0,
-	PlayerMotor_set_AngleVector_m_937837653_0,
-	PlayerMotor_get_AngleVector_m_1491325604_0,
-	PlayerMotor_Start_m127077623_0,
-	PlayerMotor_Update_m_349708810_0,
-	PlayerMotor_PoolInput_m79809565_0,
-	PlayerMotor_AngleInput_m_1668641238_0,
+	NBackAlgo__ctor_m1866336291_0,
+	NBackAlgo_Start_m813474083_0,
+	NBackAlgo_Update_m_546255030_0,
+	NBackAlgo_PlaceSquare_m798347649_0,
 	MouseLook__ctor_m_148409049_0,
 	MouseLook_Update_m1421148870_0,
 	MouseLook_Start_m_1201271257_0,
@@ -22072,6 +22084,18 @@ extern const methodPointerType g_MethodPointers[11036] =
 	TwirlEffect_OnRenderImage_m_1851175388_0,
 	VortexEffect__ctor_m_147184260_0,
 	VortexEffect_OnRenderImage_m_1649002142_0,
+	PlayerMotor__ctor_m1179939831_0,
+	PlayerMotor_set_MoveVector_m_1979166853_0,
+	PlayerMotor_get_MoveVector_m693526000_0,
+	PlayerMotor_set_AngleVector_m_937837653_0,
+	PlayerMotor_get_AngleVector_m_1491325604_0,
+	PlayerMotor_Start_m127077623_0,
+	PlayerMotor_Update_m_349708810_0,
+	PlayerMotor_PoolInput_m79809565_0,
+	PlayerMotor_AngleInput_m_1668641238_0,
+	Shooter__ctor_m_1291887617_0,
+	Shooter_Update_m333051630_0,
+	Shooter_OnGUI_m_1796488967_0,
 	VirtualJoystick__ctor_m922926596_0,
 	VirtualJoystick_Update_m272815497_0,
 	VirtualJoystick_Start_m_129935612_0,

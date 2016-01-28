@@ -1116,7 +1116,7 @@
 #include "AssemblyU2DUnityScript_Triangles1124518341.h"
 #include "AssemblyU2DUnityScript_Vignetting_1588897699.h"
 #include "AssemblyU2DUnityScript_Vignetting_AberrationMode1375473958.h"
-#include "AssemblyU2DCSharp_PlayerMotor1158565945.h"
+#include "AssemblyU2DCSharp_NBackAlgo_1568620083.h"
 #include "AssemblyU2DCSharp_MouseLook_1916018615.h"
 #include "AssemblyU2DCSharp_MouseLook_RotationAxes606117865.h"
 #include "AssemblyU2DCSharp_BlurEffect_2052860397.h"
@@ -1132,6 +1132,8 @@
 #include "AssemblyU2DCSharp_SSAOEffect_SSAOSamples1457697254.h"
 #include "AssemblyU2DCSharp_TwirlEffect161594070.h"
 #include "AssemblyU2DCSharp_VortexEffect_866693542.h"
+#include "AssemblyU2DCSharp_PlayerMotor1158565945.h"
+#include "AssemblyU2DCSharp_Shooter44359089.h"
 #include "AssemblyU2DCSharp_VirtualJoystick_1387383540.h"
 #include "AssemblyU2DCSharp_FocusWatch_1306660846.h"
 #include "mscorlib_U3CModuleU3E1560363866.h"
@@ -1565,7 +1567,7 @@
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const int32_t g_FieldOffsetTable[7231] = 
+extern const int32_t g_FieldOffsetTable[7241] = 
 {
 	0,
 	0,
@@ -8692,15 +8694,13 @@ extern const int32_t g_FieldOffsetTable[7231] =
 	offsetof(AberrationMode_t1375473958_0, ___value___1) + sizeof(Object_t),
 	0,
 	0,
-	offsetof(PlayerMotor_t1158565945_0, ___moveSpeed_2),
-	offsetof(PlayerMotor_t1158565945_0, ___drag_3),
-	offsetof(PlayerMotor_t1158565945_0, ___terminalRotationSpeed_4),
-	offsetof(PlayerMotor_t1158565945_0, ___PosJoystick_5),
-	offsetof(PlayerMotor_t1158565945_0, ___AngleJoystick_6),
-	offsetof(PlayerMotor_t1158565945_0, ___sensitivityX_7),
-	offsetof(PlayerMotor_t1158565945_0, ___thisRigidbody_8),
-	offsetof(PlayerMotor_t1158565945_0, ___U3CMoveVectorU3Ek__BackingField_9),
-	offsetof(PlayerMotor_t1158565945_0, ___U3CAngleVectorU3Ek__BackingField_10),
+	offsetof(NBackAlgo_t_1568620083_0, ___square_2),
+	offsetof(NBackAlgo_t_1568620083_0, ___NLevel_3),
+	offsetof(NBackAlgo_t_1568620083_0, ___height_4),
+	offsetof(NBackAlgo_t_1568620083_0, ___width_5),
+	offsetof(NBackAlgo_t_1568620083_0, ___rateOfChange_6),
+	offsetof(NBackAlgo_t_1568620083_0, ___squareClone_7),
+	offsetof(NBackAlgo_t_1568620083_0, ___timePassed_8),
 	offsetof(MouseLook_t_1916018615_0, ___axes_2),
 	offsetof(MouseLook_t_1916018615_0, ___sensitivityX_3),
 	offsetof(MouseLook_t_1916018615_0, ___sensitivityY_4),
@@ -8788,6 +8788,18 @@ extern const int32_t g_FieldOffsetTable[7231] =
 	offsetof(VortexEffect_t_866693542_0, ___radius_4),
 	offsetof(VortexEffect_t_866693542_0, ___angle_5),
 	offsetof(VortexEffect_t_866693542_0, ___center_6),
+	offsetof(PlayerMotor_t1158565945_0, ___moveSpeed_2),
+	offsetof(PlayerMotor_t1158565945_0, ___drag_3),
+	offsetof(PlayerMotor_t1158565945_0, ___terminalRotationSpeed_4),
+	offsetof(PlayerMotor_t1158565945_0, ___PosJoystick_5),
+	offsetof(PlayerMotor_t1158565945_0, ___AngleJoystick_6),
+	offsetof(PlayerMotor_t1158565945_0, ___sensitivityX_7),
+	offsetof(PlayerMotor_t1158565945_0, ___thisRigidbody_8),
+	offsetof(PlayerMotor_t1158565945_0, ___U3CMoveVectorU3Ek__BackingField_9),
+	offsetof(PlayerMotor_t1158565945_0, ___U3CAngleVectorU3Ek__BackingField_10),
+	offsetof(Shooter_t44359089_0, ___projectile_2),
+	offsetof(Shooter_t44359089_0, ___speed_3),
+	offsetof(Shooter_t44359089_0, ___buttonImage_4),
 	offsetof(VirtualJoystick_t_1387383540_0, ___bgImg_2),
 	offsetof(VirtualJoystick_t_1387383540_0, ___joystickImg_3),
 	offsetof(VirtualJoystick_t_1387383540_0, ___inputVector_4),
@@ -8802,7 +8814,7 @@ extern const int32_t g_FieldOffsetTable[7231] =
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1757] = 
+extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1759] = 
 {
 	sizeof (U3CModuleU3E_t1560363866_0), -1, 0, 0,
 	sizeof (Object_t), -1, 0, 0,
@@ -10541,7 +10553,7 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1757] =
 	sizeof (Vignetting_t_1588897699_0), -1, 0, 0,
 	sizeof (AberrationMode_t1375473958_0)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (U3CModuleU3E_t1742281553_0), -1, 0, 0,
-	sizeof (PlayerMotor_t1158565945_0), -1, 0, 0,
+	sizeof (NBackAlgo_t_1568620083_0), -1, 0, 0,
 	sizeof (MouseLook_t_1916018615_0), -1, 0, 0,
 	sizeof (RotationAxes_t606117865_0)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0,
 	sizeof (BlurEffect_t_2052860397_0), -1, sizeof(BlurEffect_t_2052860397_0_StaticFields), 0,
@@ -10559,6 +10571,8 @@ extern const Il2CppTypeDefinitionSizes g_Il2CppTypeDefinitionSizesTable[1757] =
 	sizeof (SepiaToneEffect_t_888954914_0), -1, 0, 0,
 	sizeof (TwirlEffect_t161594070_0), -1, 0, 0,
 	sizeof (VortexEffect_t_866693542_0), -1, 0, 0,
+	sizeof (PlayerMotor_t1158565945_0), -1, 0, 0,
+	sizeof (Shooter_t44359089_0), -1, 0, 0,
 	sizeof (VirtualJoystick_t_1387383540_0), -1, 0, 0,
 	sizeof (FocusWatch_t_1306660846_0), -1, 0, 0,
 };

@@ -222,6 +222,7 @@ UnityEngine.Graphics::Internal_BlitMultiTap
 UnityEngine.Graphics::Internal_SetNullRT
 UnityEngine.Graphics::Internal_SetRTSimple
 UnityEngine.Graphics::Internal_SetRandomWriteTargetBuffer
+UnityEngine.GUI::INTERNAL_CALL_DoButton
 UnityEngine.GUI::set_changed
 UnityEngine.GUILayer::INTERNAL_CALL_HitTest
 UnityEngine.GUILayoutUtility::INTERNAL_CALL_Internal_GetWindowRect
@@ -482,6 +483,7 @@ UnityEngine.RenderTexture::set_format
 UnityEngine.RenderTexture::GetTemporary
 UnityEngine.RenderTexture::get_format
 UnityEngine.Resources::Load
+UnityEngine.Rigidbody::INTERNAL_set_velocity
 UnityEngine.Rigidbody::set_freezeRotation
 UnityEngine.Screen::get_fullScreen
 UnityEngine.Screen::get_height

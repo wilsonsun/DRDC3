@@ -451,13 +451,13 @@ struct SliderState_t305709255_0;
 #include "UnityEngine_UnityEngine_GUISkin_1636059793.h"
 #include "UnityEngine_UnityEngine_GUIUtility1464296506MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUISkin_1636059793MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_GUIContent_1764161721MethodDeclarations.h"
+#include "UnityEngine_UnityEngine_GUIContent_1764161721.h"
 #include "UnityEngine_UnityEngine_GUIStyle822037503.h"
 #include "UnityEngine_UnityEngine_GUILayoutUtility_160158928MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUILayout_504588644MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUILayoutOption1897899569.h"
 #include "UnityEngine_UnityEngine_GUILayoutUtility_LayoutCac_428403207.h"
-#include "UnityEngine_UnityEngine_GUIContent_1764161721.h"
-#include "UnityEngine_UnityEngine_GUIContent_1764161721MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUILayout_504588644.h"
 #include "UnityEngine_UnityEngine_GUILayoutOption1897899569MethodDeclarations.h"
 #include "UnityEngine_UnityEngine_GUILayoutOption_Type85189752.h"
@@ -2850,6 +2850,23 @@ extern "C"  bool Physics_INTERNAL_CALL_Internal_Raycast_m1291554392_0 (Object_t 
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Physics_INTERNAL_CALL_Internal_Raycast_m1291554392_0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Physics::INTERNAL_CALL_Internal_Raycast(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)");
 	return _il2cpp_icall_func(___origin, ___direction, ___hitInfo, ___maxDistance, ___layermask, ___queryTriggerInteraction);
+}
+// System.Void UnityEngine.Rigidbody::set_velocity(UnityEngine.Vector3)
+extern "C"  void Rigidbody_set_velocity_m799562119_0 (Rigidbody_t_1022613340_0 * __this, Vector3_t_725341337_0  ___value, const MethodInfo* method)
+{
+	{
+		Rigidbody_INTERNAL_set_velocity_m484592601_0(__this, (&___value), /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Rigidbody::INTERNAL_set_velocity(UnityEngine.Vector3&)
+extern "C"  void Rigidbody_INTERNAL_set_velocity_m484592601_0 (Rigidbody_t_1022613340_0 * __this, Vector3_t_725341337_0 * ___value, const MethodInfo* method)
+{
+	typedef void (*Rigidbody_INTERNAL_set_velocity_m484592601_0_ftn) (Rigidbody_t_1022613340_0 *, Vector3_t_725341337_0 *);
+	static Rigidbody_INTERNAL_set_velocity_m484592601_0_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_INTERNAL_set_velocity_m484592601_0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::INTERNAL_set_velocity(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___value);
 }
 // System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
 extern "C"  void Rigidbody_set_freezeRotation_m_305493407_0 (Rigidbody_t_1022613340_0 * __this, bool ___value, const MethodInfo* method)
@@ -7575,6 +7592,37 @@ IL_0012:
 		return;
 	}
 }
+// System.Boolean UnityEngine.GUI::Button(UnityEngine.Rect,UnityEngine.Texture)
+extern TypeInfo* GUIUtility_t1464296506_0_il2cpp_TypeInfo_var;
+extern TypeInfo* GUIContent_t_1764161721_0_il2cpp_TypeInfo_var;
+extern TypeInfo* GUI_t1215239378_0_il2cpp_TypeInfo_var;
+extern "C"  bool GUI_Button_m_543563329_0 (Object_t * __this /* static, unused */, Rect_t_981940947_0  ___position, Texture_t1814018354_0 * ___image, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		GUIUtility_t1464296506_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(910);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUI_t1215239378_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(908);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(GUIUtility_t1464296506_0_il2cpp_TypeInfo_var);
+		GUIUtility_CheckOnGUI_m640002012_0(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Rect_t_981940947_0  L_0 = ___position;
+		Texture_t1814018354_0 * L_1 = ___image;
+		IL2CPP_RUNTIME_CLASS_INIT(GUIContent_t_1764161721_0_il2cpp_TypeInfo_var);
+		GUIContent_t_1764161721_0 * L_2 = GUIContent_Temp_m_468549333_0(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t1215239378_0_il2cpp_TypeInfo_var);
+		GUISkin_t_1636059793_0 * L_3 = ((GUI_t1215239378_0_StaticFields*)GUI_t1215239378_0_il2cpp_TypeInfo_var->static_fields)->___s_Skin_9;
+		NullCheck(L_3);
+		GUIStyle_t822037503_0 * L_4 = GUISkin_get_button_m_666949540_0(L_3, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		IntPtr_t L_5 = (L_4->___m_Ptr_0);
+		bool L_6 = GUI_DoButton_m_2100473027_0(NULL /*static, unused*/, L_0, L_2, L_5, /*hidden argument*/NULL);
+		return L_6;
+	}
+}
 // System.Void UnityEngine.GUI::CallWindowDelegate(UnityEngine.GUI/WindowFunction,System.Int32,UnityEngine.GUISkin,System.Int32,System.Single,System.Single,UnityEngine.GUIStyle)
 extern TypeInfo* GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var;
 extern TypeInfo* GUI_t1215239378_0_il2cpp_TypeInfo_var;
@@ -7584,9 +7632,9 @@ extern "C"  void GUI_CallWindowDelegate_m_2034628492_0 (Object_t * __this /* sta
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		GUI_t1215239378_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(908);
-		GUILayoutOptionU5BU5D_t_1479612077_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
+		GUILayoutOptionU5BU5D_t_1479612077_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(913);
 		s_Il2CppMethodIntialized = true;
 	}
 	GUISkin_t_1636059793_0 * V_0 = {0};
@@ -7684,6 +7732,33 @@ extern "C"  void GUI_set_changed_m727947722_0 (Object_t * __this /* static, unus
 	_il2cpp_icall_func = (GUI_set_changed_m727947722_0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUI::set_changed(System.Boolean)");
 	_il2cpp_icall_func(___value);
 }
+// System.Boolean UnityEngine.GUI::DoButton(UnityEngine.Rect,UnityEngine.GUIContent,System.IntPtr)
+extern TypeInfo* GUI_t1215239378_0_il2cpp_TypeInfo_var;
+extern "C"  bool GUI_DoButton_m_2100473027_0 (Object_t * __this /* static, unused */, Rect_t_981940947_0  ___position, GUIContent_t_1764161721_0 * ___content, IntPtr_t ___style, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodIntialized;
+	if (!s_Il2CppMethodIntialized)
+	{
+		GUI_t1215239378_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(908);
+		s_Il2CppMethodIntialized = true;
+	}
+	{
+		GUIContent_t_1764161721_0 * L_0 = ___content;
+		IntPtr_t L_1 = ___style;
+		IL2CPP_RUNTIME_CLASS_INIT(GUI_t1215239378_0_il2cpp_TypeInfo_var);
+		bool L_2 = GUI_INTERNAL_CALL_DoButton_m1954108340_0(NULL /*static, unused*/, (&___position), L_0, L_1, /*hidden argument*/NULL);
+		return L_2;
+	}
+}
+// System.Boolean UnityEngine.GUI::INTERNAL_CALL_DoButton(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
+extern "C"  bool GUI_INTERNAL_CALL_DoButton_m1954108340_0 (Object_t * __this /* static, unused */, Rect_t_981940947_0 * ___position, GUIContent_t_1764161721_0 * ___content, IntPtr_t ___style, const MethodInfo* method)
+{
+	typedef bool (*GUI_INTERNAL_CALL_DoButton_m1954108340_0_ftn) (Rect_t_981940947_0 *, GUIContent_t_1764161721_0 *, IntPtr_t);
+	static GUI_INTERNAL_CALL_DoButton_m1954108340_0_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GUI_INTERNAL_CALL_DoButton_m1954108340_0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUI::INTERNAL_CALL_DoButton(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)");
+	return _il2cpp_icall_func(___position, ___content, ___style);
+}
 // System.Void UnityEngine.GUIContent::.ctor()
 extern TypeInfo* String_t_il2cpp_TypeInfo_var;
 extern "C"  void GUIContent__ctor_m923375087_0 (GUIContent_t_1764161721_0 * __this, const MethodInfo* method)
@@ -7734,7 +7809,7 @@ extern "C"  void GUIContent__cctor_m_1922239586_0 (Object_t * __this /* static, 
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
 		String_t_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(11);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -7764,7 +7839,7 @@ extern "C"  GUIContent_t_1764161721_0 * GUIContent_Temp_m_1437526401_0 (Object_t
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
 		String_t_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(11);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -7791,7 +7866,7 @@ extern "C"  GUIContent_t_1764161721_0 * GUIContent_Temp_m_468549333_0 (Object_t 
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
 		String_t_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(11);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -7818,7 +7893,7 @@ extern "C"  void GUIContent_ClearStaticCache_m_1906108708_0 (Object_t * __this /
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
 		String_t_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(11);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -7857,7 +7932,7 @@ extern "C"  GUILayoutOption_t1897899569_0 * GUILayout_Width_m_2035345885_0 (Obje
 	if (!s_Il2CppMethodIntialized)
 	{
 		Single_t_766435453_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(43);
-		GUILayoutOption_t1897899569_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(913);
+		GUILayoutOption_t1897899569_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
 		s_Il2CppMethodIntialized = true;
 	}
 	{
@@ -7878,7 +7953,7 @@ extern "C"  GUILayoutOption_t1897899569_0 * GUILayout_Height_m_520164412_0 (Obje
 	if (!s_Il2CppMethodIntialized)
 	{
 		Single_t_766435453_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(43);
-		GUILayoutOption_t1897899569_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(913);
+		GUILayoutOption_t1897899569_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
 		s_Il2CppMethodIntialized = true;
 	}
 	{
@@ -7931,7 +8006,7 @@ extern "C"  void GUILayoutUtility__cctor_m1548085895_0 (Object_t * __this /* sta
 	if (!s_Il2CppMethodIntialized)
 	{
 		Dictionary_2_t1352990289_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(917);
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		LayoutCache_t_428403207_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(916);
 		Dictionary_2__ctor_m_1447211227_0_MethodInfo_var = il2cpp_codegen_method_info_from_index(2147483718);
 		s_Il2CppMethodIntialized = true;
@@ -7960,7 +8035,7 @@ extern "C"  LayoutCache_t_428403207_0 * GUILayoutUtility_SelectIDList_m801008209
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		LayoutCache_t_428403207_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(916);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -8045,7 +8120,7 @@ extern "C"  void GUILayoutUtility_Begin_m2012081982_0 (Object_t * __this /* stat
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		GUILayoutGroup_t1993552195_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(915);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -8140,7 +8215,7 @@ extern "C"  void GUILayoutUtility_BeginWindow_m_277315758_0 (Object_t * __this /
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		GUILayoutGroup_t1993552195_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(915);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -8267,7 +8342,7 @@ extern "C"  void GUILayoutUtility_Layout_m1143185416_0 (Object_t * __this /* sta
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		GUIUtility_t1464296506_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(910);
 		Mathf_t_380118987_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(857);
 		s_Il2CppMethodIntialized = true;
@@ -8357,7 +8432,7 @@ extern "C"  void GUILayoutUtility_LayoutFromEditorWindow_m_947189521_0 (Object_t
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		GUIUtility_t1464296506_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(910);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -8409,7 +8484,7 @@ extern "C"  void GUILayoutUtility_LayoutFreeGroup_m_2044093604_0 (Object_t * __t
 	if (!s_Il2CppMethodIntialized)
 	{
 		GUILayoutGroup_t1993552195_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(915);
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		Enumerator_t30576069_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(919);
 		IDisposable_t_2098447282_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(141);
 		List_1_GetEnumerator_m_1744436347_0_MethodInfo_var = il2cpp_codegen_method_info_from_index(2147483719);
@@ -8502,7 +8577,7 @@ extern "C"  void GUILayoutUtility_LayoutSingleGroup_m1841651392_0 (Object_t * __
 	if (!s_Il2CppMethodIntialized)
 	{
 		Mathf_t_380118987_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(857);
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		s_Il2CppMethodIntialized = true;
 	}
 	float V_0 = 0.0f;
@@ -8633,7 +8708,7 @@ extern "C"  GUIStyle_t822037503_0 * GUILayoutUtility_get_spaceStyle_m_666018956_
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		GUIStyle_t822037503_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(920);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -8669,7 +8744,7 @@ extern "C"  Rect_t_981940947_0  GUILayoutUtility_Internal_GetWindowRect_m1168223
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		s_Il2CppMethodIntialized = true;
 	}
 	Rect_t_981940947_0  V_0 = {0};
@@ -8697,7 +8772,7 @@ extern "C"  void GUILayoutUtility_Internal_MoveWindow_m_2103148685_0 (Object_t *
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		s_Il2CppMethodIntialized = true;
 	}
 	{
@@ -9830,7 +9905,7 @@ extern "C"  void GUILayoutGroup_CalcWidth_m1234746178_0 (GUILayoutGroup_t1993552
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		Mathf_t_380118987_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(857);
 		Enumerator_t30576069_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(919);
 		IDisposable_t_2098447282_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(141);
@@ -10440,7 +10515,7 @@ extern "C"  void GUILayoutGroup_SetHorizontal_m985132857_0 (GUILayoutGroup_t1993
 		Mathf_t_380118987_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(857);
 		Enumerator_t30576069_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(919);
 		IDisposable_t_2098447282_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(141);
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		List_1_GetEnumerator_m_1744436347_0_MethodInfo_var = il2cpp_codegen_method_info_from_index(2147483719);
 		Enumerator_get_Current_m_2075402561_0_MethodInfo_var = il2cpp_codegen_method_info_from_index(2147483720);
 		Enumerator_MoveNext_m2002561277_0_MethodInfo_var = il2cpp_codegen_method_info_from_index(2147483721);
@@ -11046,7 +11121,7 @@ extern "C"  void GUILayoutGroup_CalcHeight_m126240205_0 (GUILayoutGroup_t1993552
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		Mathf_t_380118987_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(857);
 		Enumerator_t30576069_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(919);
 		IDisposable_t_2098447282_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(141);
@@ -11620,7 +11695,7 @@ extern "C"  void GUILayoutGroup_SetVertical_m967336103_0 (GUILayoutGroup_t199355
 	{
 		GUIStyle_t822037503_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(920);
 		Mathf_t_380118987_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(857);
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		Enumerator_t30576069_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(919);
 		IDisposable_t_2098447282_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(141);
 		List_1_GetEnumerator_m_1744436347_0_MethodInfo_var = il2cpp_codegen_method_info_from_index(2147483719);
@@ -15190,7 +15265,7 @@ extern "C"  void GUIStyle_Draw_m_1441408714_0 (GUIStyle_t822037503_0 * __this, R
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
 		GUIStyle_t822037503_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(920);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -15216,7 +15291,7 @@ extern "C"  void GUIStyle_Draw_m645175538_0 (GUIStyle_t822037503_0 * __this, Rec
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
 		GUIStyle_t822037503_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(920);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -15243,7 +15318,7 @@ extern "C"  void GUIStyle_Draw_m1301423966_0 (GUIStyle_t822037503_0 * __this, Re
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
 		GUIStyle_t822037503_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(920);
 		s_Il2CppMethodIntialized = true;
 	}
@@ -16718,7 +16793,7 @@ extern "C"  void GUIUtility_BeginGUI_m1799121707_0 (Object_t * __this /* static,
 	{
 		GUIUtility_t1464296506_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(910);
 		GUI_t1215239378_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(908);
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		s_Il2CppMethodIntialized = true;
 	}
 	{
@@ -16759,9 +16834,9 @@ extern "C"  void GUIUtility_EndGUI_m1069008217_0 (Object_t * __this /* static, u
 	static bool s_Il2CppMethodIntialized;
 	if (!s_Il2CppMethodIntialized)
 	{
-		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
+		GUILayoutUtility_t_160158928_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(912);
 		GUIUtility_t1464296506_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(910);
-		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(914);
+		GUIContent_t_1764161721_0_il2cpp_TypeInfo_var = il2cpp_codegen_type_info_from_index(911);
 		s_Il2CppMethodIntialized = true;
 	}
 	int32_t V_0 = 0;

@@ -1,4 +1,4 @@
-//Generated on : 2016-01-16 12:29:47 AM
+//Generated on : 2016-01-28 4:23:14 PM
 void RegisterAllStrippedInternalCalls()
 {
 	//Start Registrations for type : UnityEngine.Animation
@@ -1022,6 +1022,10 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.Graphics
 
 	//Start Registrations for type : UnityEngine.GUI
+
+		//System.Boolean UnityEngine.GUI::INTERNAL_CALL_DoButton(UnityEngine.Rect&,UnityEngine.GUIContent,System.IntPtr)
+		void Register_UnityEngine_GUI_INTERNAL_CALL_DoButton();
+		Register_UnityEngine_GUI_INTERNAL_CALL_DoButton();
 
 		//System.Void UnityEngine.GUI::set_changed(System.Boolean)
 		void Register_UnityEngine_GUI_set_changed();
@@ -2190,6 +2194,10 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.Resources
 
 	//Start Registrations for type : UnityEngine.Rigidbody
+
+		//System.Void UnityEngine.Rigidbody::INTERNAL_set_velocity(UnityEngine.Vector3&)
+		void Register_UnityEngine_Rigidbody_INTERNAL_set_velocity();
+		Register_UnityEngine_Rigidbody_INTERNAL_set_velocity();
 
 		//System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
 		void Register_UnityEngine_Rigidbody_set_freezeRotation();

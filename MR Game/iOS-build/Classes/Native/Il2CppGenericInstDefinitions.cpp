@@ -422,12 +422,12 @@ extern const Il2CppGenericInst GenInst_Vector4_t_725341336_0_0_0_0 = { 1, GenIns
 extern const Il2CppType Collider_t770782909_0_0_0_0;
 static const Il2CppType* GenInst_Collider_t770782909_0_0_0_0_Types[] = { &Collider_t770782909_0_0_0_0 };
 extern const Il2CppGenericInst GenInst_Collider_t770782909_0_0_0_0 = { 1, GenInst_Collider_t770782909_0_0_0_0_Types };
-extern const Il2CppType CharacterController_t_902802116_0_0_0_0;
-static const Il2CppType* GenInst_CharacterController_t_902802116_0_0_0_0_Types[] = { &CharacterController_t_902802116_0_0_0_0 };
-extern const Il2CppGenericInst GenInst_CharacterController_t_902802116_0_0_0_0 = { 1, GenInst_CharacterController_t_902802116_0_0_0_0_Types };
 extern const Il2CppType Rigidbody_t_1022613340_0_0_0_0;
 static const Il2CppType* GenInst_Rigidbody_t_1022613340_0_0_0_0_Types[] = { &Rigidbody_t_1022613340_0_0_0_0 };
 extern const Il2CppGenericInst GenInst_Rigidbody_t_1022613340_0_0_0_0 = { 1, GenInst_Rigidbody_t_1022613340_0_0_0_0_Types };
+extern const Il2CppType CharacterController_t_902802116_0_0_0_0;
+static const Il2CppType* GenInst_CharacterController_t_902802116_0_0_0_0_Types[] = { &CharacterController_t_902802116_0_0_0_0 };
+extern const Il2CppGenericInst GenInst_CharacterController_t_902802116_0_0_0_0 = { 1, GenInst_CharacterController_t_902802116_0_0_0_0_Types };
 extern const Il2CppType IConvertible_t2008793943_0_0_0_0;
 static const Il2CppType* GenInst_IConvertible_t2008793943_0_0_0_0_Types[] = { &IConvertible_t2008793943_0_0_0_0 };
 extern const Il2CppGenericInst GenInst_IConvertible_t2008793943_0_0_0_0 = { 1, GenInst_IConvertible_t2008793943_0_0_0_0_Types };
@@ -1626,8 +1626,8 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[512] =
 	&GenInst_Color32_t_113586919_0_0_0_0,
 	&GenInst_Vector4_t_725341336_0_0_0_0,
 	&GenInst_Collider_t770782909_0_0_0_0,
-	&GenInst_CharacterController_t_902802116_0_0_0_0,
 	&GenInst_Rigidbody_t_1022613340_0_0_0_0,
+	&GenInst_CharacterController_t_902802116_0_0_0_0,
 	&GenInst_IConvertible_t2008793943_0_0_0_0,
 	&GenInst_IComparable_t_2130417720_0_0_0_0,
 	&GenInst_IComparable_1_t873857132_0_0_0_0,

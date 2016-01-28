@@ -16,6 +16,11 @@
 struct Rigidbody_t_1022613340_0;
 
 #include "codegen/il2cpp-codegen.h"
+#include "UnityEngine_UnityEngine_Vector3_725341337.h"
 
+// System.Void UnityEngine.Rigidbody::set_velocity(UnityEngine.Vector3)
+extern "C"  void Rigidbody_set_velocity_m799562119_0 (Rigidbody_t_1022613340_0 * __this, Vector3_t_725341337_0  ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Rigidbody::INTERNAL_set_velocity(UnityEngine.Vector3&)
+extern "C"  void Rigidbody_INTERNAL_set_velocity_m484592601_0 (Rigidbody_t_1022613340_0 * __this, Vector3_t_725341337_0 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
 extern "C"  void Rigidbody_set_freezeRotation_m_305493407_0 (Rigidbody_t_1022613340_0 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

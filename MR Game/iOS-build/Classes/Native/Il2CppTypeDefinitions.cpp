@@ -3533,6 +3533,12 @@ extern const Il2CppType GenericStack_t1899127421_0_1_0_0 = { (void*)1469, 0, IL2
 extern const Il2CppType GUIUtility_t1464296506_0_0_0_0 = { (void*)1371, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType GUIUtility_t1464296506_0_1_0_0 = { (void*)1371, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
+extern const Il2CppType GUIContent_t_1764161721_0_0_0_0 = { (void*)1353, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType GUIContent_t_1764161721_0_1_0_0 = { (void*)1353, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+extern const Il2CppType GUIContent_t_1764161721_0_0_0_49 = { (void*)1353, 49, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType GUIContent_t_1764161721_0_0_0_22 = { (void*)1353, 22, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType GUIContent_t_1764161721_0_0_0_1 = { (void*)1353, 1, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+
 extern const Il2CppType GUILayoutUtility_t_160158928_0_0_0_0 = { (void*)1355, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType GUILayoutUtility_t_160158928_0_1_0_0 = { (void*)1355, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
@@ -3541,12 +3547,6 @@ extern const Il2CppType GUILayoutOptionU5BU5D_t_1479612077_0_0_0_0 = { (void*)&G
 
 extern const Il2CppType GUILayoutOption_t1897899569_0_0_0_0 = { (void*)1360, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType GUILayoutOption_t1897899569_0_1_0_0 = { (void*)1360, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
-
-extern const Il2CppType GUIContent_t_1764161721_0_0_0_0 = { (void*)1353, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const Il2CppType GUIContent_t_1764161721_0_1_0_0 = { (void*)1353, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
-extern const Il2CppType GUIContent_t_1764161721_0_0_0_49 = { (void*)1353, 49, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const Il2CppType GUIContent_t_1764161721_0_0_0_22 = { (void*)1353, 22, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const Il2CppType GUIContent_t_1764161721_0_0_0_1 = { (void*)1353, 1, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 
 extern const Il2CppType GUILayoutGroup_t1993552195_0_0_0_0 = { (void*)1358, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType GUILayoutGroup_t1993552195_0_0_0_3 = { (void*)1358, 3, IL2CPP_TYPE_CLASS, 0, 0, 0 };
@@ -4880,6 +4880,7 @@ extern const Il2CppType Rigidbody_t_1022613340_0_0_0_0 = { (void*)1295, 0, IL2CP
 extern const Il2CppType Rigidbody_t_1022613340_0_0_0_3 = { (void*)1295, 3, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType Rigidbody_t_1022613340_0_1_0_0 = { (void*)1295, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 extern const Il2CppType Rigidbody_t_1022613340_0_0_0_1 = { (void*)1295, 1, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType Rigidbody_t_1022613340_0_0_0_6 = { (void*)1295, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 
 extern const Il2CppType BlurEffect_t_2052860397_0_0_0_0 = { (void*)1740, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType BlurEffect_t_2052860397_0_1_0_0 = { (void*)1740, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
@@ -13649,12 +13650,8 @@ extern const Il2CppType AberrationMode_t1375473958_0_0_0_32854 = { (void*)1735, 
 extern const Il2CppType U3CModuleU3E_t1742281553_0_0_0_0 = { (void*)1736, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType U3CModuleU3E_t1742281553_0_1_0_0 = { (void*)1736, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
-extern const Il2CppType PlayerMotor_t1158565945_0_0_0_0 = { (void*)1737, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const Il2CppType PlayerMotor_t1158565945_0_1_0_0 = { (void*)1737, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
-
-extern const Il2CppType VirtualJoystick_t_1387383540_0_0_0_6 = { (void*)1755, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const Il2CppType VirtualJoystick_t_1387383540_0_0_0_0 = { (void*)1755, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const Il2CppType VirtualJoystick_t_1387383540_0_1_0_0 = { (void*)1755, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+extern const Il2CppType NBackAlgo_t_1568620083_0_0_0_0 = { (void*)1737, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType NBackAlgo_t_1568620083_0_1_0_0 = { (void*)1737, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
 extern const Il2CppType MouseLook_t_1916018615_0_0_0_0 = { (void*)1738, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType MouseLook_t_1916018615_0_1_0_0 = { (void*)1738, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
@@ -13708,9 +13705,19 @@ extern const Il2CppType TwirlEffect_t161594070_0_1_0_0 = { (void*)1753, 0, IL2CP
 extern const Il2CppType VortexEffect_t_866693542_0_0_0_0 = { (void*)1754, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const Il2CppType VortexEffect_t_866693542_0_1_0_0 = { (void*)1754, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
-extern const Il2CppType FocusWatch_t_1306660846_0_0_0_0 = { (void*)1756, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const Il2CppType FocusWatch_t_1306660846_0_1_0_0 = { (void*)1756, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
-extern const Il2CppType* const  g_Il2CppTypeTable[7375] = 
+extern const Il2CppType PlayerMotor_t1158565945_0_0_0_0 = { (void*)1755, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType PlayerMotor_t1158565945_0_1_0_0 = { (void*)1755, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+
+extern const Il2CppType VirtualJoystick_t_1387383540_0_0_0_6 = { (void*)1757, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType VirtualJoystick_t_1387383540_0_0_0_0 = { (void*)1757, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType VirtualJoystick_t_1387383540_0_1_0_0 = { (void*)1757, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+
+extern const Il2CppType Shooter_t44359089_0_0_0_0 = { (void*)1756, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType Shooter_t44359089_0_1_0_0 = { (void*)1756, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+
+extern const Il2CppType FocusWatch_t_1306660846_0_0_0_0 = { (void*)1758, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const Il2CppType FocusWatch_t_1306660846_0_1_0_0 = { (void*)1758, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+extern const Il2CppType* const  g_Il2CppTypeTable[7380] = 
 {
 	&Object_t_0_0_0,
 	&Attribute_t675283329_0_0_0_0,
@@ -14623,10 +14630,10 @@ extern const Il2CppType* const  g_Il2CppTypeTable[7375] =
 	&GUI_t1215239378_0_0_0_0,
 	&GenericStack_t1899127421_0_0_0_0,
 	&GUIUtility_t1464296506_0_0_0_0,
+	&GUIContent_t_1764161721_0_0_0_0,
 	&GUILayoutUtility_t_160158928_0_0_0_0,
 	&GUILayoutOptionU5BU5D_t_1479612077_0_0_0_0,
 	&GUILayoutOption_t1897899569_0_0_0_0,
-	&GUIContent_t_1764161721_0_0_0_0,
 	&GUILayoutGroup_t1993552195_0_0_0_0,
 	&LayoutCache_t_428403207_0_0_0_0,
 	&Dictionary_2_t1352990289_0_0_0_0,
@@ -21037,10 +21044,8 @@ extern const Il2CppType* const  g_Il2CppTypeTable[7375] =
 	&AberrationMode_t1375473958_0_0_0_32854,
 	&U3CModuleU3E_t1742281553_0_0_0_0,
 	&U3CModuleU3E_t1742281553_0_1_0_0,
-	&PlayerMotor_t1158565945_0_0_0_0,
-	&PlayerMotor_t1158565945_0_1_0_0,
-	&VirtualJoystick_t_1387383540_0_0_0_6,
-	&Rigidbody_t_1022613340_0_0_0_1,
+	&NBackAlgo_t_1568620083_0_0_0_0,
+	&NBackAlgo_t_1568620083_0_1_0_0,
 	&MouseLook_t_1916018615_0_0_0_0,
 	&MouseLook_t_1916018615_0_1_0_0,
 	&RotationAxes_t606117865_0_0_0_6,
@@ -21081,6 +21086,13 @@ extern const Il2CppType* const  g_Il2CppTypeTable[7375] =
 	&TwirlEffect_t161594070_0_1_0_0,
 	&VortexEffect_t_866693542_0_0_0_0,
 	&VortexEffect_t_866693542_0_1_0_0,
+	&PlayerMotor_t1158565945_0_0_0_0,
+	&PlayerMotor_t1158565945_0_1_0_0,
+	&VirtualJoystick_t_1387383540_0_0_0_6,
+	&Rigidbody_t_1022613340_0_0_0_1,
+	&Shooter_t44359089_0_0_0_0,
+	&Shooter_t44359089_0_1_0_0,
+	&Rigidbody_t_1022613340_0_0_0_6,
 	&VirtualJoystick_t_1387383540_0_0_0_0,
 	&VirtualJoystick_t_1387383540_0_1_0_0,
 	&IEventSystemHandler_t56148059_0_0_0_1,

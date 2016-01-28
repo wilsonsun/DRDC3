@@ -10,7 +10,7 @@ public class PlayerMotor : MonoBehaviour {
 	public Vector3 AngleVector{ set; get; }
 	public VirtualJoystick PosJoystick;
 	public VirtualJoystick AngleJoystick;
-	public float sensitivityX = 15F;
+	public float sensitivityX;
 
 
 	private Rigidbody thisRigidbody;

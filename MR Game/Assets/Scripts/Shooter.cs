@@ -14,7 +14,7 @@ public class Shooter : MonoBehaviour {
 	}
 
 	private void OnGUI() {
-		if (GUI.Button(new Rect(15, 500, buttonImage.width/3, buttonImage.height/3), buttonImage)) {
+		if (GUI.Button(new Rect(15, 450, buttonImage.width/2, buttonImage.height/2), buttonImage)) {
 			Rigidbody instantiatedProjectile = Instantiate(projectile,transform.position,transform.rotation)as Rigidbody;
 			instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0,-speed));
 			Destroy (instantiatedProjectile.gameObject, 3);

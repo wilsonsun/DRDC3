@@ -22,11 +22,6 @@ public class FocusWatch : MonoBehaviour {
 		secondHandClone.transform.localRotation = Quaternion.Euler (secondHandRot.x, secondHandRot.y, secondHandRot.z);
 	}
 
-	void OnEnable(){
-		print ("Watch was enabled!!");
-	}
-
-
 	// Update is called once per frame
 	void Update () {
 

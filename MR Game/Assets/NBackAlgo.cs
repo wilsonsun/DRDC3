@@ -33,14 +33,17 @@ public class NBackAlgo : MonoBehaviour {
 	float timePassed = 0f;
 	List<NBackCoord> NBackCoords = new List<NBackCoord>();
 
+	bool squareRepeated = false;
+
 	// Use this for initialization
 	void Start () {
 		squareClone = (Transform) Instantiate(square, transform.position, Quaternion.Euler(new Vector3(0f, 0f,0f)));
 		squareClone.SetParent (this.transform);
 		squareClone.transform.localRotation = Quaternion.Euler (new Vector3 (90f, 180f, 180f));
 
-		squareClone.gameObject.SetActive (false);
+		NBackCoords.Add (new NBackCoord (0, 0));
 
+		squareClone.gameObject.SetActive (false);
 		StartCoroutine(ListenForUserInput());
 	}
 	
@@ -48,12 +51,13 @@ public class NBackAlgo : MonoBehaviour {
 	void Update () {
 		timePassed += Time.deltaTime;
 
-		if (timePassed > rateOfChange / 4 && timePassed < rateOfChange * 0.75)
+		if (timePassed > 0 && timePassed < rateOfChange * 0.5)
 			squareClone.gameObject.SetActive (true);
 		else
 			squareClone.gameObject.SetActive (false);
 
 		if (timePassed > rateOfChange){
+			squareClone.gameObject.SetActive (false);
 			PlaceSquare (Random.Range (-1, 2), Random.Range (-1, 2));
 			timePassed = 0f;
 		}
@@ -67,14 +71,14 @@ public class NBackAlgo : MonoBehaviour {
 		//modifying the n back coordinates
 		NBackCoord newCoord = new NBackCoord (x, y);
 
-		//inserting latest coordinate to the front of the list
-		NBackCoords.Insert (0, newCoord);
-
 		//checking if list is full
 		//if it is, must remove last element of the list
-		if (NBackCoords.Count > NLevel) {
-			NBackCoords.RemoveAt(NLevel);
+		if (NBackCoords.Count == NLevel + 1) {
+
+			NBackCoords.RemoveAt (NLevel);
 		}
+
+		NBackCoords.Insert (0, newCoord);
 			
 		/*print ("-------------------------------------------");
 		for(int i =0; i< NBackCoords.Count; i++){
@@ -83,15 +87,39 @@ public class NBackAlgo : MonoBehaviour {
 
 	}
 
+	void OnEnable(){
+		EventManager.OnTouch += Signal;
+	}
+
+	void OnDisable(){
+		EventManager.OnTouch -= Signal;
+	}
+
+	void Signal(){
+		if (squareRepeated == true)
+			print ("CORRECT!");
+		else
+			print ("WRONG");
+	}
+
 	IEnumerator ListenForUserInput() {
 		print ("Started listening for input");
 
 		while (true) {
-			while (NBackCoords.Count > 0) {
-				if (NBackCoords [0].x == NBackCoords [NBackCoords.Count - 1].x
-				   && NBackCoords [0].y == NBackCoords [NBackCoords.Count - 1].y)
+
+			//check to ensure the enough square havve appeared to 
+			//for N level repetitions to actually occur
+			while (NBackCoords.Count == NLevel + 1) {
+				
+				if (NBackCoords [0].x == NBackCoords [NLevel].x
+				    && NBackCoords [0].y == NBackCoords [NLevel].y) {
 					print ("Same N back level detected");
 
+					squareRepeated = true;
+				}
+
+				else
+					squareRepeated = false;
 				yield return new WaitForSeconds(rateOfChange);
 			}
 			yield return new WaitForSeconds(rateOfChange);

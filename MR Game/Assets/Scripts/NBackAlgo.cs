@@ -44,7 +44,7 @@ public class NBackAlgo : MonoBehaviour {
 		NBackCoords.Add (new NBackCoord (0, 0));
 
 		squareClone.gameObject.SetActive (false);
-		StartCoroutine(ListenForUserInput());
+		StartCoroutine(CheckingForRepeatSquare());
 	}
 	
 	// Update is called once per frame
@@ -102,7 +102,7 @@ public class NBackAlgo : MonoBehaviour {
 			print ("WRONG");
 	}
 
-	IEnumerator ListenForUserInput() {
+	IEnumerator CheckingForRepeatSquare() {
 		print ("Started listening for input");
 
 		while (true) {

@@ -10,7 +10,7 @@ public class DoorBehaviour : MonoBehaviour {
 	public float timeToOpen = 1.5f;
 	float timePassed = 0f;
 
-	public bool open = false;
+	bool open = false;
 
 
 
@@ -18,19 +18,21 @@ public class DoorBehaviour : MonoBehaviour {
 
 	void Start(){
 		player = GameObject.FindWithTag ("Player");
-		closePos = transform.position;
+		closePos = transform.localPosition;
 	}
 
 
 	void Update(){
 		timePassed += Time.deltaTime;
 
+		//opening door
 		if (open && transform.position != openPos) {
-			transform.position = Vector3.Lerp (transform.position, openPos, timePassed / timeToOpen);
+			transform.localPosition = Vector3.Lerp (transform.localPosition, openPos, timePassed / timeToOpen);
 		}
 
+		//closing door
 		else if(!open && transform.position != closePos){
-			transform.position = Vector3.Lerp (transform.position, closePos, timePassed / timeToOpen);
+			transform.localPosition = Vector3.Lerp (transform.localPosition, closePos, timePassed / timeToOpen);
 		}
 	}
 
@@ -45,13 +47,13 @@ public class DoorBehaviour : MonoBehaviour {
 	void Signal(){
 		float dist = Mathf.Abs(Vector3.Distance(player.transform.position, transform.position));
 
+		//interacting with the door
+		//either opening of closing it
 		if (dist <= maxInteractDist && dist >= minInteractDist) {
-			print ("CORRECT!");
+			print ("Player interacted with " + gameObject.name);
 			open = !open;
 			timePassed = 0f;
 		}
-		else
-			print ("WRONG!!");
 	}
 		
 }

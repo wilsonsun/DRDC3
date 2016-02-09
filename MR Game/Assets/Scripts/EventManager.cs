@@ -7,7 +7,7 @@ public class EventManager : MonoBehaviour
 	public static event TouchAction OnTouch;
 
 
-	void OnGUI()
+	void Update()
 	{
 		if(Input.GetKeyUp("space"))
 		{

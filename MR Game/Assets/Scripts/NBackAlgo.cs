@@ -20,6 +20,10 @@ public class NBackCoord {
 
 public class NBackAlgo : MonoBehaviour {
 
+	public delegate void Alert();
+	public static event Alert NBackFinished;
+
+
 	public Transform square;
 	public int NLevel = 1;
 
@@ -28,16 +32,22 @@ public class NBackAlgo : MonoBehaviour {
 	public float width  = 3.5f;
 
 	public float rateOfChange = 1f;
+	public float offsetDist = 0.01f;
+	public int correctLength = 1;
+	public int maxRunningTurns = 10;
+
 
 	Transform squareClone;
 	float timePassed = 0f;
 	List<NBackCoord> NBackCoords = new List<NBackCoord>();
 
 	bool squareRepeated = false;
+	int timesCorrect = 0;
+	int turnsPassed = 0;
 
 	// Use this for initialization
 	void Start () {
-		squareClone = (Transform) Instantiate(square, transform.position, Quaternion.Euler(new Vector3(0f, 0f,0f)));
+		squareClone = (Transform) Instantiate(square, transform.position + transform.up*offsetDist, Quaternion.Euler(new Vector3(0f, 0f,0f)));
 		squareClone.SetParent (this.transform);
 		squareClone.transform.localRotation = Quaternion.Euler (new Vector3 (90f, 180f, 180f));
 
@@ -62,11 +72,29 @@ public class NBackAlgo : MonoBehaviour {
 			timePassed = 0f;
 		}
 
+		if (timesCorrect >= correctLength) {
+			print ("correct enough times");
+			NBackPassed ();
+		}
+
+		if (turnsPassed > maxRunningTurns) {
+			print ("too many turns passed");
+			NBackPassed ();
+		}
+
+	}
+
+	private void NBackPassed(){
+		NBackFinished ();
+		NBackCoords.Clear();
+		timesCorrect = 0;
+		turnsPassed = 0;
+		transform.parent.gameObject.SetActive (false);
 	}
 
 	private void PlaceSquare(int x, int y){
 		//moving square in LOCAL COORDINATES
-		squareClone.transform.localPosition = new Vector3 (x*width, 0f, y*height);
+		squareClone.transform.localPosition = new Vector3 (x*width, offsetDist, y*height);
 
 		//modifying the n back coordinates
 		NBackCoord newCoord = new NBackCoord (x, y);
@@ -79,15 +107,20 @@ public class NBackAlgo : MonoBehaviour {
 		}
 
 		NBackCoords.Insert (0, newCoord);
-			
-		/*print ("-------------------------------------------");
+
+		turnsPassed++;
+		print ("-------------------------------------------");
 		for(int i =0; i< NBackCoords.Count; i++){
 			print (NBackCoords[i].x+", "+NBackCoords[i].y);
-		}*/
+		}
 
 	}
 
 	void OnEnable(){
+		timesCorrect = 0;
+		turnsPassed = 0;
+		squareRepeated = false;
+		StartCoroutine (CheckingForRepeatSquare());
 		EventManager.OnTouch += Signal;
 	}
 
@@ -96,8 +129,10 @@ public class NBackAlgo : MonoBehaviour {
 	}
 
 	void Signal(){
-		if (squareRepeated == true)
+		if (squareRepeated == true) {
 			print ("CORRECT!");
+			timesCorrect++;
+		}
 		else
 			print ("WRONG");
 	}

@@ -14,11 +14,6 @@ public class HackingTerminal : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindWithTag ("Player");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	void OnEnable(){
 		EventManager.OnTouch += Signal;

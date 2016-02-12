@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class EventManager : MonoBehaviour 
 {
@@ -11,6 +12,7 @@ public class EventManager : MonoBehaviour
 
 	void Update()
 	{
+		
 		if(Input.GetKeyUp("space"))
 		{
 			if(OnTouch != null)
@@ -23,4 +25,12 @@ public class EventManager : MonoBehaviour
 			watchCamera.SetActive (!watchCamera.activeSelf);
 		}
 	}
+
+	public void fireoffOnTouch() {
+		if (OnTouch != null) {
+			Debug.Log ("being fired");
+			OnTouch ();
+		}
+	}
+
 }

@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class Shooter : MonoBehaviour {
+public class trying : MonoBehaviour {
+
 
 	public Rigidbody projectile;
 	public float speed = 20f;
@@ -35,3 +36,4 @@ public class Shooter : MonoBehaviour {
 		Destroy (instantiatedProjectile.gameObject, 3);
 	}
 }
+

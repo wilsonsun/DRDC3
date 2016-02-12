@@ -52,11 +52,11 @@ public class FocusWatch : MonoBehaviour {
 
 	void OnEnable(){
 		//timesCorrect = 0;
-		EventManager.OnTouch += Signal;
+		FinishButton.OnTouch += Signal;
 	}
 
 	void OnDisable(){
-		EventManager.OnTouch -= Signal;
+		FinishButton.OnTouch -= Signal;
 	}
 
 	void Signal(){

@@ -16,15 +16,15 @@ public class HackingTerminal : MonoBehaviour {
 	}
 
 	void OnEnable(){
-		EventManager.OnTouch += Signal;
+		FinishButton.OnTouch += Signal;
 		AlertDueToContact.OnAlert += DisableDoor;
 		NBackAlgo.NBackFinished += EnableDoor;
 	}
 
 	void OnDisable(){
-		EventManager.OnTouch -= Signal;
+		FinishButton.OnTouch -= Signal;
 		AlertDueToContact.OnAlert -= DisableDoor;
-		NBackAlgo.NBackFinished += EnableDoor;
+		NBackAlgo.NBackFinished -= EnableDoor;
 	}
 
 	void Signal(){

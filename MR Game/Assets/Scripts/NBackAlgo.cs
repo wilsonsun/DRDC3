@@ -109,10 +109,10 @@ public class NBackAlgo : MonoBehaviour {
 		NBackCoords.Insert (0, newCoord);
 
 		turnsPassed++;
-		print ("-------------------------------------------");
+		/*print ("-------------------------------------------");
 		for(int i =0; i< NBackCoords.Count; i++){
 			print (NBackCoords[i].x+", "+NBackCoords[i].y);
-		}
+		}*/
 
 	}
 
@@ -121,11 +121,11 @@ public class NBackAlgo : MonoBehaviour {
 		turnsPassed = 0;
 		squareRepeated = false;
 		StartCoroutine (CheckingForRepeatSquare());
-		EventManager.OnTouch += Signal;
+		FinishButton.OnTouch += Signal;
 	}
 
 	void OnDisable(){
-		EventManager.OnTouch -= Signal;
+		FinishButton.OnTouch -= Signal;
 	}
 
 	void Signal(){

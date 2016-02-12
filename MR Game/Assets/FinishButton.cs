@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class FinishButton : MonoBehaviour {
 
@@ -14,6 +15,12 @@ public class FinishButton : MonoBehaviour {
 	public GameObject tempDropDown;
 	private GameObject PlanDecision;
 	private bool trigger;
+
+	public GameObject watchCamera;
+
+	public delegate void TouchAction();
+	public static event TouchAction OnTouch;
+	public static event TouchAction OnWatch;
 
 
 	// Use this for initialization
@@ -53,4 +60,25 @@ public class FinishButton : MonoBehaviour {
 		PlanDecision.SetActive (trigger);
 
 	}
+
+	public void fireOnTouch() {
+
+		if (OnTouch != null) {
+			Debug.Log ("being fired");
+			OnTouch();
+		}
+	}
+
+	public void fireOnWatch(){
+		if (OnWatch != null)
+			OnWatch ();
+		watchCamera.SetActive (!watchCamera.activeSelf);
+
+	}
+	/*
+	public void fireoffOnWatch() {
+		if (OnWatch != null)
+			OnWatch ();
+		watchCamera.SetActive (!watchCamera.activeSelf);
+	}*/
 }

@@ -37,11 +37,11 @@ public class DoorBehaviour : MonoBehaviour {
 	}
 
 	void OnEnable(){
-		EventManager.OnTouch += Signal;
+		FinishButton.OnTouch += Signal;
 	}
 
 	void OnDisable(){
-		EventManager.OnTouch -= Signal;
+		FinishButton.OnTouch -= Signal;
 	}
 
 	void Signal(){

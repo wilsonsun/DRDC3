@@ -15,6 +15,7 @@ public class EventManager : MonoBehaviour
 		
 		if(Input.GetKeyUp("space"))
 		{
+			print ("Setting off OnTouch caused by pressing Space");
 			if(OnTouch != null)
 				OnTouch();
 		}

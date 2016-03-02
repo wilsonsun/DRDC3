@@ -38,13 +38,17 @@ public class DoorBehaviour : MonoBehaviour {
 
 	void OnEnable(){
 		FinishButton.OnTouch += Signal;
+		EventManager.OnTouch += Signal;
 	}
 
 	void OnDisable(){
 		FinishButton.OnTouch -= Signal;
+		EventManager.OnTouch -= Signal;
 	}
 
 	void Signal(){
+		print ("Door was signaled!");
+
 		float dist = Mathf.Abs(Vector3.Distance(player.transform.position, transform.position));
 
 		//interacting with the door
